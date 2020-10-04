@@ -1,0 +1,188 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>LibrePCB Blog</title>
+    <link>http://librepcb.org/blog/</link>
+    <description>Blog posts of LibrePCB, an Open Source EDA software</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 04 Oct 2020 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="http://librepcb.org/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>LibrePCB 0.1.5 Released</title>
+      <link>http://librepcb.org/blog/2020-10-04_release_0.1.5/</link>
+      <pubDate>Sun, 04 Oct 2020 00:00:00 +0000</pubDate>
+      <dc:creator>U. Bruhin</dc:creator>
+      <guid>http://librepcb.org/blog/2020-10-04_release_0.1.5/</guid>
+      <description>We are happy to announce LibrePCB 0.1.5 with several long awaited new features in the library-, schematic- and board editors!
+Highlights Copy&amp;amp;Paste in Schematic- and Board Editors Finally the clipboard functionality cut, copy and paste are available in the schematic- and board editors (#724, #754)! Just use the keyboard shortcuts Ctrl+X to cut, Ctrl+C to copy and Ctrl+V to paste schematic- or board items. In the board editor, it&amp;rsquo;s even possible to paste polygons copied from a footprint in the library editor.</description>
+    </item>
+    
+    <item>
+      <title>LibrePCB 0.1.4 Released</title>
+      <link>http://librepcb.org/blog/2020-05-03_release_0.1.4/</link>
+      <pubDate>Sun, 03 May 2020 00:00:00 +0000</pubDate>
+      <dc:creator>U. Bruhin</dc:creator>
+      <guid>http://librepcb.org/blog/2020-05-03_release_0.1.4/</guid>
+      <description>This minor release is one more important step to make LibrePCB more powerful and to improve usability of the user interface.
+Highlights Usability Improvements The user interface got many usability improvements to make creating libraries and projects more efficient. For example the schematic- and board editors now allow searching for symbols resp. devices (#671):
+
+Furthermore, all input fields for length values (line width, drill diameter, coordinate etc.) are now displayed in the unit configured in the workspace settings (#684).</description>
+    </item>
+    
+    <item>
+      <title>LibrePCB Talk at FOSDEM 2020</title>
+      <link>http://librepcb.org/blog/2020-01-03_librepcb_at_fosdem_20/</link>
+      <pubDate>Fri, 03 Jan 2020 00:00:00 +0000</pubDate>
+      <dc:creator>U. Bruhin</dc:creator>
+      <guid>http://librepcb.org/blog/2020-01-03_librepcb_at_fosdem_20/</guid>
+      <description>It&amp;rsquo;s two years ago since I gave the introduction to LibrePCB talk at FOSDEM 18. This was a milestone in the history of LibrePCB since it was the first time LibrePCB was actively presented to a large audience.
+
+Since that talk, there was a huge progress regarding LibrePCB. Therefore I decided to submit a status update talk at FOSDEM 2020. The talk takes place on Saturday, February 1, 10:55 in room H.</description>
+    </item>
+    
+    <item>
+      <title>LibrePCB 0.1.3 Released</title>
+      <link>http://librepcb.org/blog/2019-11-30_release_0.1.3/</link>
+      <pubDate>Sat, 30 Nov 2019 00:00:00 +0000</pubDate>
+      <dc:creator>U. Bruhin</dc:creator>
+      <guid>http://librepcb.org/blog/2019-11-30_release_0.1.3/</guid>
+      <description>This release adds a lot of (long-awaited) new features and important bugfixes to LibrePCB.
+Highlights Design Rule Check for Boards (#581) Finally the board editor got a design rule check! It checks a PCB for common mistakes like missing connections, too small clearances (or shorts), or too thin copper elements. A new dock widget shows the reported messages and clicking on a message displays the issue in the board view.</description>
+    </item>
+    
+    <item>
+      <title>LibrePCB 0.1.2 Released</title>
+      <link>http://librepcb.org/blog/2019-07-14_release_0.1.2/</link>
+      <pubDate>Sun, 14 Jul 2019 00:00:00 +0000</pubDate>
+      <dc:creator>U. Bruhin</dc:creator>
+      <guid>http://librepcb.org/blog/2019-07-14_release_0.1.2/</guid>
+      <description>This is mainly a bugfix release which fixes some usability, compatibility and functional issues of the 0.1.1 release.
+Highlights Support latest build environments The dependencies quazip, googletest, optional and type_safe were updated (#476) and some deprecation warnings were fixed (#478). Now LibrePCB also compiles with GCC 9.x and Qt 5.13 without any warnings.
+Since we migrated from Travis-CI to Azure Pipelines (#458), CI is now able to build on Ubuntu 19.</description>
+    </item>
+    
+    <item>
+      <title>LibrePCB 0.1.1 Released</title>
+      <link>http://librepcb.org/blog/2019-04-21_release_0.1.1/</link>
+      <pubDate>Sun, 21 Apr 2019 00:00:00 +0000</pubDate>
+      <dc:creator>U. Bruhin</dc:creator>
+      <guid>http://librepcb.org/blog/2019-04-21_release_0.1.1/</guid>
+      <description>There was a lot of progress the last months, and now it&amp;rsquo;s time to provide a new release containing all the improvements. In this release, especially the library editor was heavily improved to make it more powerful and easier to use. See the highlights and the detailed changelog below.
+Thanks a lot to all contributors and sponsors for pushing LibrePCB one step further!
+Highlights Design Rule Check for Library Elements (#381) In virtually every EDA tool it&amp;rsquo;s easy to make mistakes when creating library elements like symbols or packages.</description>
+    </item>
+    
+    <item>
+      <title>Merchandise Products Available</title>
+      <link>http://librepcb.org/blog/2019-03-20_merchandise_shop/</link>
+      <pubDate>Wed, 20 Mar 2019 00:00:00 +0000</pubDate>
+      <dc:creator>U. Bruhin</dc:creator>
+      <guid>http://librepcb.org/blog/2019-03-20_merchandise_shop/</guid>
+      <description>You like LibrePCB and need some new clothes or a coffee mug? Then you might be interested in the merchandise shop which got online today!
+
+The Initial Idea Actually I just wanted to order some LibrePCB T-shirts for myself and thus was looking for a shop which allows to print custom designs on T-shirts. Then I found spreadshop which even allows to create whole shops with custom designs, so other people can order the same products too!</description>
+    </item>
+    
+    <item>
+      <title>AISLER Supports LibrePCB Projects</title>
+      <link>http://librepcb.org/blog/2018-12-03_aisler_supports_librepcb/</link>
+      <pubDate>Mon, 03 Dec 2018 00:00:00 +0000</pubDate>
+      <dc:creator>U. Bruhin</dc:creator>
+      <guid>http://librepcb.org/blog/2018-12-03_aisler_supports_librepcb/</guid>
+      <description>We are very happy to announce that AISLER now supports LibrePCB projects, so you can upload and review LibrePCB projects directly on their website and order PCBs and stencils just with a few clicks! :-)
+
+Why AISLER? AISLER, based in Netherlands, is a smart prototyping service for electronics. They provide PCBs, stencils and parts for electronic projects for an affordable price, and everything is made in Germany.
+I met Felix and Patrick, the founders of AISLER, at FOSDEM 2018.</description>
+    </item>
+    
+    <item>
+      <title>LibrePCB 0.1.0 Released</title>
+      <link>http://librepcb.org/blog/2018-11-25_release_0.1.0/</link>
+      <pubDate>Sun, 25 Nov 2018 00:00:00 +0000</pubDate>
+      <dc:creator>U. Bruhin</dc:creator>
+      <guid>http://librepcb.org/blog/2018-11-25_release_0.1.0/</guid>
+      <description>The stable release 0.1.0 is out!
+Since the release candidate 0.1.0 RC2 three weeks ago, no critical bugs were reported, so we decided to finally publish the stable release 0.1.0. The changelog compared to 0.1.0 RC2 is very short:
+Changelog Library Editor:  Fix saving of library URL Fix saving of component property &amp;ldquo;schematic-only&amp;rdquo;  File Format Stability As this is an official stable release, the file format is also considered as stable and you can expect that any project created with that release will be loadable with future releases of LibrePCB.</description>
+    </item>
+    
+    <item>
+      <title>LibrePCB 0.1.0 RC2 Released</title>
+      <link>http://librepcb.org/blog/2018-11-04_release_0.1.0-rc2/</link>
+      <pubDate>Sun, 04 Nov 2018 00:00:00 +0000</pubDate>
+      <dc:creator>U. Bruhin</dc:creator>
+      <guid>http://librepcb.org/blog/2018-11-04_release_0.1.0-rc2/</guid>
+      <description>After two weeks of testing, we have a new release candidate ready with some bugfixes and usability improvements:
+Changelog Control Panel:  Hide non-existent recent and favorite projects Hide debug tools in workspace settings dialog  Library Manager:  Don&amp;rsquo;t show 100% progress while extracting ZIP  Library Editor:  Fix saving of component symbol position/rotation (#356)  Schematic Editor:  Fix resizing of &amp;ldquo;Add Component&amp;rdquo; dialog caused by long device names  Board Editor:  Fix crash when trying to connect trace to pad without net Fix too high default width of the dock widget at the right Fix possibly hidden layers in footprint preview of the &amp;ldquo;Place Devices&amp;rdquo; dock Show warning in the &amp;ldquo;Place Devices&amp;rdquo; dock if no matching device found in library Set default board size to 100x80mm Set default grid interval to 0.</description>
+    </item>
+    
+    <item>
+      <title>LibrePCB 0.1.0 RC1 Released</title>
+      <link>http://librepcb.org/blog/2018-10-21_release_0.1.0-rc1/</link>
+      <pubDate>Sun, 21 Oct 2018 00:00:00 +0000</pubDate>
+      <dc:creator>U. Bruhin</dc:creator>
+      <guid>http://librepcb.org/blog/2018-10-21_release_0.1.0-rc1/</guid>
+      <description>Great news: Our first official release candidate is out! :-)
+If you didn&amp;rsquo;t try LibrePCB already, now is the time to start using (or at least testing) LibrePCB for your next projects – we would love to get your feedback!
+Project Status Please keep in mind that this is our very first release candidate, so you may encounter one or another bug or missing feature. Nevertheless, we think the application is in a very usable state now – you can download and create libraries, draw schematics, route multilayer PCBs and export Gerber files.</description>
+    </item>
+    
+    <item>
+      <title>Status Update 2018-09-15</title>
+      <link>http://librepcb.org/blog/2018-09-15_status_update/</link>
+      <pubDate>Sat, 15 Sep 2018 00:00:00 +0000</pubDate>
+      <dc:creator>U. Bruhin</dc:creator>
+      <guid>http://librepcb.org/blog/2018-09-15_status_update/</guid>
+      <description>The last blog post is already a few months ago, and many things happened in the meantime. Thus I would like to inform you about the current status of the project, what happened in past and what the next tasks are.
+New Logo Our logo was originally downloaded from a free icon portal. Although it was legal (thanks to its permissive license), it&amp;rsquo;s not a good idea to use a free icon as a logo.</description>
+    </item>
+    
+    <item>
+      <title>LibrePCB Meets FontoBene</title>
+      <link>http://librepcb.org/blog/2018-04-21_librepcb_meets_fontobene/</link>
+      <pubDate>Sat, 21 Apr 2018 00:00:00 +0000</pubDate>
+      <dc:creator>U. Bruhin</dc:creator>
+      <guid>http://librepcb.org/blog/2018-04-21_librepcb_meets_fontobene/</guid>
+      <description>Finally! LibrePCB has a fully functional stroke font which can be used on PCBs. So now you can place designators or other text items on silkscreen (or other layers) which of course are then exported into the generated Gerber files. The new font file format FontoBene was developed especially for LibrePCB.
+
+Why a stroke font instead of OTF/TTF? It may sound strange to implement a primitive stroke font in 2018 when we actually have much more powerful TrueType and OpenType fonts since many years.</description>
+    </item>
+    
+    <item>
+      <title>LibrePCB Talk at FOSDEM 2018</title>
+      <link>http://librepcb.org/blog/2018-01-02_librepcb_at_fosdem_18/</link>
+      <pubDate>Tue, 02 Jan 2018 00:00:00 +0000</pubDate>
+      <dc:creator>U. Bruhin</dc:creator>
+      <guid>http://librepcb.org/blog/2018-01-02_librepcb_at_fosdem_18/</guid>
+      <description>The Free and Open Source Software Developers&amp;rsquo; European Meeting (FOSDEM) is a great event for developers and users interested in free software. It is hosted at the ULB Solbosch Campus in Brussels, Belgium. This year it takes place on February 3 / 4.
+
+There are many different tracks available, but for us the most interesting one is the CAD and Open Hardware devroom. It contains talks about PCB design, FPGA design, SPICE simulation and open hardware in general.</description>
+    </item>
+    
+    <item>
+      <title>LibrePCB Has Switched to S-Expressions</title>
+      <link>http://librepcb.org/blog/2017-10-30_librepcb_has_switched_to_s_expressions/</link>
+      <pubDate>Mon, 30 Oct 2017 00:00:00 +0000</pubDate>
+      <dc:creator>U. Bruhin</dc:creator>
+      <guid>http://librepcb.org/blog/2017-10-30_librepcb_has_switched_to_s_expressions/</guid>
+      <description>One major goal of LibrePCB is to use human readable files to represent libraries, projects and so on. This is important to let the user understand what the EDA tool actually does when modifying a schematic or board. In addition, a good file format is essential for version control systems to keep track of changes in libraries and projects.
+But LibrePCB doesn&amp;rsquo;t just want to have some human readable file format.</description>
+    </item>
+    
+    <item>
+      <title>LibrePCB Has a Blog! :-)</title>
+      <link>http://librepcb.org/blog/2017-09-13_librepcb-has-a-blog/</link>
+      <pubDate>Wed, 13 Sep 2017 00:00:00 +0000</pubDate>
+      <dc:creator>U. Bruhin</dc:creator>
+      <guid>http://librepcb.org/blog/2017-09-13_librepcb-has-a-blog/</guid>
+      <description>Here it is: The long awaited blog of LibrePCB!
+It&amp;rsquo;s still very basic, but this will be improved some time ;)
+From now on, we will use this blog to provide various information, e.g. announcements of upcoming events, release notes, development progress or technical explanations.
+If you have any input regarding this blog or our website in general, please open an issue on the GitHub repository.</description>
+    </item>
+    
+  </channel>
+</rss>

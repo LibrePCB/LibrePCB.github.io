@@ -1,0 +1,87 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Posts</title>
+    <link>http://librepcb.org/post/</link>
+    <description>Blog posts of LibrePCB, an Open Source EDA software</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 04 Feb 2017 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="http://librepcb.org/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>What is LibrePCB?</title>
+      <link>http://librepcb.org/post/about/</link>
+      <pubDate>Sun, 13 Sep 2015 00:00:00 +0000</pubDate>
+      <dc:creator></dc:creator>
+      <guid>http://librepcb.org/post/about/</guid>
+      <description>LibrePCB is a free EDA software to develop printed circuit boards.
+Key Features:  Cross-platform (Unix/Linux, Mac OS X, Windows) All-in-one (project management, library/schematic/board editors) Intuitive, modern and easy-to-use graphical user interface Very powerful library design with some innovative concepts Human-readable file formats Open Source (GNU GPLv3)  Interested? Try it out! </description>
+    </item>
+    
+    <item>
+      <title>Control Panel</title>
+      <link>http://librepcb.org/post/control_panel/</link>
+      <pubDate>Sun, 13 Sep 2015 00:00:00 +0000</pubDate>
+      <dc:creator></dc:creator>
+      <guid>http://librepcb.org/post/control_panel/</guid>
+      <description>The control panel gives you fast access to all of your projects, especially to recently used and favorite projects. It also shows you the description of projects without opening them, if available. Just create a README.md inside your project&amp;rsquo;s directory!</description>
+    </item>
+    
+    <item>
+      <title>Schematic Editor</title>
+      <link>http://librepcb.org/post/schematic_editor/</link>
+      <pubDate>Sun, 13 Sep 2015 00:00:00 +0000</pubDate>
+      <dc:creator></dc:creator>
+      <guid>http://librepcb.org/post/schematic_editor/</guid>
+      <description>The schematic editor is very easy to use and still powerful. Thanks to the innovative library concept, you don&amp;rsquo;t have to worry about choosing footprints while drawing the schematic. In contrast to other EDA tools, you also don&amp;rsquo;t have to worry about manually assigning symbol pins to footprint pads later in the board editor.</description>
+    </item>
+    
+    <item>
+      <title>Board Editor</title>
+      <link>http://librepcb.org/post/board_editor/</link>
+      <pubDate>Sun, 13 Sep 2015 00:00:00 +0000</pubDate>
+      <dc:creator></dc:creator>
+      <guid>http://librepcb.org/post/board_editor/</guid>
+      <description>Ever struggled in the middle of layouting if you need to relocate some devices before continue routing the traces? LibrePCB&amp;rsquo;s board editor just lets you fork your half-done layout to continue with two different layouting strategies! Of course all of the existing boards are always in sync with the schematics.</description>
+    </item>
+    
+    <item>
+      <title>Library Browser</title>
+      <link>http://librepcb.org/post/library_browser/</link>
+      <pubDate>Sun, 13 Sep 2015 00:00:00 +0000</pubDate>
+      <dc:creator></dc:creator>
+      <guid>http://librepcb.org/post/library_browser/</guid>
+      <description>When adding components to the schematic, most EDA tools let you choose them from a simple list of the installed libraries (often named by manufacturer). LibrePCB thinks this is a stupid system and thus lets you choose your components from a tree of categories instead, no matter which library provides them.</description>
+    </item>
+    
+    <item>
+      <title>Library Manager</title>
+      <link>http://librepcb.org/post/library_manager/</link>
+      <pubDate>Sat, 04 Feb 2017 00:00:00 +0000</pubDate>
+      <dc:creator></dc:creator>
+      <guid>http://librepcb.org/post/library_manager/</guid>
+      <description>Managing libraries has never been easier than with LibrePCB&amp;rsquo;s library manager. It downloads, installs and updates libraries directly from the internet. No more need to do this manually.</description>
+    </item>
+    
+    <item>
+      <title>Library Editor</title>
+      <link>http://librepcb.org/post/library_editor/</link>
+      <pubDate>Sat, 04 Feb 2017 00:00:00 +0000</pubDate>
+      <dc:creator></dc:creator>
+      <guid>http://librepcb.org/post/library_editor/</guid>
+      <description>The intuitive user interface of the library editor helps to quickly draw new symbols, footprints and more. Thanks to the integrated rule check, you will even get warned about common mistakes immediately.</description>
+    </item>
+    
+    <item>
+      <title>Sponsors</title>
+      <link>http://librepcb.org/post/sponsors/</link>
+      <pubDate>Sat, 04 Feb 2017 00:00:00 +0000</pubDate>
+      <dc:creator></dc:creator>
+      <guid>http://librepcb.org/post/sponsors/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

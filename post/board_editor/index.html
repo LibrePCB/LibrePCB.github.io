@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Board Editor</title>
+
+    
+    <link href="/css/bootstrap-theme.css" rel="stylesheet">
+
+    
+    <link href="/css/HPstyles.css" rel="stylesheet">
+    <link href="/css/hugofont.css" rel="stylesheet">
+    <link href="/css/owl.theme.default.css" rel="stylesheet">
+    <link href="/css/custom.css" rel="stylesheet">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  </head>
+
+  <body>
+
+<p>Ever struggled in the middle of layouting if you need to relocate some devices
+before continue routing the traces? LibrePCB&rsquo;s board editor just lets you fork
+your half-done layout to continue with two different layouting strategies! Of
+course all of the existing boards are always in sync with the schematics.</p>
+<p><a href="/img/board_editor.png"><img src="/img/thumbs/board_editor.png" alt="Board Editor"></a></p>
+
+
+<footer id="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3 text-center">
+        <a href="https://github.com/LibrePCB/LibrePCB" class="icon-octocat icon-2x"></a>
+        <p><script>document.write('Copyright &copy; ' ); document.write(new Date().getFullYear());document.write(' Urban Bruhin' );</script></p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+
+<script src="/js/jquery-2.1.1.min.js"></script>
+<script src="/js/owl.carousel.min.js"></script>
+
+<script>
+$(function() {
+$('a[href*=#]:not([href=#])').click(function() {
+  if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+      || location.hostname == this.hostname) {
+
+    var target = $(this.hash);
+    target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+    if (target.length) {
+      $('html,body').animate({
+        scrollTop: target.offset().top
+      }, 1000);
+      return false;
+    }
+  }
+});
+});
+</script>
+
+</body>
+
+</html>
+

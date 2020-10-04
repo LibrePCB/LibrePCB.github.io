@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>LibrePCB 0.1.3 Released</title>
+
+    
+    <link href="/css/bootstrap-theme.css" rel="stylesheet">
+
+    
+    <link href="/css/HPstyles.css" rel="stylesheet">
+    <link href="/css/hugofont.css" rel="stylesheet">
+    <link href="/css/owl.theme.default.css" rel="stylesheet">
+    <link href="/css/custom.css" rel="stylesheet">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  </head>
+
+  <body>
+
+<div id="top" class="blogHeader">
+  <div class="vert-text">
+    <div class="blogTitle">LibrePCB Blog</div>
+    <div class="buttonbox">
+      <a href="/" class="btn btn-home btn-lg">Home</i></a>
+      <a href="/blog" class="btn btn-blog btn-lg">Blog</i></a>
+      <a href="/download" class="btn btn-download btn-lg">Download</i></a>
+      <a href="/compare" class="btn btn-compare btn-lg">Compare</i></a>
+      <a href="https://docs.librepcb.org" class="btn btn-docs btn-lg">Docs</i></a>
+      <a href="/discuss" class="btn btn-discuss btn-lg">Discuss</i></a>
+      <a href="https://shop.spreadshirt.com/librepcb/" class="btn btn-merchandise btn-lg">Merchandise</i></a>
+      <a href="https://github.com/LibrePCB/LibrePCB" class="btn btn-dark btn-lg">GitHub <i class="icon-octocat"></i></a>
+      <a href="/donate" class="btn btn-donate btn-lg">Donate</a>
+    </div>
+  </div>
+</div>
+
+
+<div id="main">
+    <div id="intro" class="counterpoint">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2 text-center">
+            <h2>LibrePCB 0.1.3 Released</h2>
+            <p class="lead">
+              <p>This release adds a lot of (long-awaited) new features and important bugfixes
+to LibrePCB.</p>
+<h3 id="highlights">Highlights</h3>
+<h4 id="design-rule-check-for-boards-581httpsgithubcomlibrepcblibrepcbpull581">Design Rule Check for Boards (<a href="https://github.com/LibrePCB/LibrePCB/pull/581">#581</a>)</h4>
+<p>Finally the board editor got a design rule check! It checks a PCB for common
+mistakes like missing connections, too small clearances (or shorts), or too
+thin copper elements. A new dock widget shows the reported messages and
+clicking on a message displays the issue in the board view.</p>
+<p><a href="/img/board_editor_drc.gif"><img src="/img/board_editor_drc.gif" alt="DRC"></a><!-- raw HTML omitted --></p>
+<p>Please note that the new design rule options are not yet saved to files, so
+you have to re-enter them after opening the project the next time. This will
+be implemented in the next major release of LibrePCB.</p>
+<h4 id="bom-export-499httpsgithubcomlibrepcblibrepcbpull499">BOM Export (<a href="https://github.com/LibrePCB/LibrePCB/pull/499">#499</a>)</h4>
+<p>Now it&rsquo;s also possible to export the bill of materials (BOM) of a LibrePCB
+project to a CSV file. In addition to some predefined columns, you can add
+arbitrary component attributes as additional columns to the CSV:</p>
+<p><a href="/img/bom_export_dialog.png"><img src="/img/bom_export_dialog.png" alt="DRC"></a></p>
+<h4 id="print-boards-567httpsgithubcomlibrepcblibrepcbpull567">Print Boards (<a href="https://github.com/LibrePCB/LibrePCB/pull/567">#567</a>)</h4>
+<p>Boards can now be printed and exported to PDF, with respecting the currently
+visible layers. This allows for example to create assembly plans like this:</p>
+<p><a href="/img/board_editor_assembly_plan.png"><img src="/img/board_editor_assembly_plan.png" alt="DRC"></a></p>
+<h3 id="changelog">Changelog</h3>
+<h4 id="library-editor">Library Editor:</h4>
+<ul>
+<li>Add mirror functionality to symbol/package editors
+(<a href="https://github.com/LibrePCB/LibrePCB/pull/569">#569</a>)</li>
+<li>Show footprint pad names in package editor
+(<a href="https://github.com/LibrePCB/LibrePCB/pull/570">#570</a>)</li>
+<li>Add more widgets to package text drawing command toolbar
+(<a href="https://github.com/LibrePCB/LibrePCB/pull/521">#521</a>)</li>
+<li>Adjust default values of symbol and package elements
+(<a href="https://github.com/LibrePCB/LibrePCB/pull/523">#523</a>)</li>
+<li>Remove underscore from predefined text placeholders
+(<a href="https://github.com/LibrePCB/LibrePCB/pull/555">#555</a>)</li>
+<li>Fix possibly missing message box when closing tab
+(<a href="https://github.com/LibrePCB/LibrePCB/pull/563">#563</a>)</li>
+</ul>
+<h4 id="schematic-editor">Schematic Editor:</h4>
+<ul>
+<li>Add BOM export dialog
+(<a href="https://github.com/LibrePCB/LibrePCB/pull/499">#499</a>)</li>
+<li>Allow changing pre-selected device of components
+(<a href="https://github.com/LibrePCB/LibrePCB/pull/565">#565</a>)</li>
+<li>Provide more options when renaming net segments
+(<a href="https://github.com/LibrePCB/LibrePCB/pull/532">#532</a>)</li>
+<li>Initialize <code>*.lppz</code> export filename with default value
+(<a href="https://github.com/LibrePCB/LibrePCB/pull/524">#524</a>)</li>
+<li>Fix missing device when adding component multiple times
+(<a href="https://github.com/LibrePCB/LibrePCB/pull/561">#561</a>)</li>
+</ul>
+<h4 id="board-editor">Board Editor:</h4>
+<ul>
+<li>Add design rule check
+(<a href="https://github.com/LibrePCB/LibrePCB/pull/581">#581</a>)</li>
+<li>Add PDF export and print support
+(<a href="https://github.com/LibrePCB/LibrePCB/pull/567">#567</a>)</li>
+<li>Add tool to measure wire length
+(<a href="https://github.com/LibrePCB/LibrePCB/pull/564">#564</a>)</li>
+<li>Allow to hide copper planes
+(<a href="https://github.com/LibrePCB/LibrePCB/pull/531">#531</a>)</li>
+<li>Allow rotating while moving items
+(<a href="https://github.com/LibrePCB/LibrePCB/pull/533">#533</a>)</li>
+<li>Add device context menu item &ldquo;snap to grid&rdquo;
+(<a href="https://github.com/LibrePCB/LibrePCB/pull/525">#525</a>)</li>
+<li>Fix missing plane cut-out for board outlines in footprints
+(<a href="https://github.com/LibrePCB/LibrePCB/pull/501">#501</a>)</li>
+<li>Fix invisible zero-width circles/polygons
+(<a href="https://github.com/LibrePCB/LibrePCB/pull/502">#502</a>)</li>
+<li>Fix wrong rotation of mirrored pads in plane cut-outs
+(<a href="https://github.com/LibrePCB/LibrePCB/pull/509">#509</a>)</li>
+</ul>
+<h4 id="gerber-export">Gerber Export:</h4>
+<ul>
+<li>Add support for non-square octagon pads
+(<a href="https://github.com/LibrePCB/LibrePCB/pull/507">#507</a>)</li>
+<li>Always use multi-quadrant mode for arcs
+(<a href="https://github.com/LibrePCB/LibrePCB/pull/504">#504</a>)</li>
+<li>Fix possibly wrong position of circles in footprints
+(<a href="https://github.com/LibrePCB/LibrePCB/pull/508">#508</a>)</li>
+</ul>
+<h4 id="cli">CLI:</h4>
+<ul>
+<li>Add <code>--strict</code> option
+(<a href="https://github.com/LibrePCB/LibrePCB/pull/583">#583</a>)</li>
+</ul>
+<h4 id="miscellaneous">Miscellaneous:</h4>
+<ul>
+<li>Implement pinch to zoom in all graphics views
+(<a href="https://github.com/LibrePCB/LibrePCB/pull/477">#477</a>)</li>
+<li>Add menu items to toggle visibility of dock widgets
+(<a href="https://github.com/LibrePCB/LibrePCB/pull/487">#487</a>)</li>
+<li>Support copying and moving rows in polygon editor dialogs
+(<a href="https://github.com/LibrePCB/LibrePCB/pull/489">#489</a>)</li>
+<li>Auto-select attribute unit when entering unit in value field
+(<a href="https://github.com/LibrePCB/LibrePCB/pull/491">#491</a>)</li>
+<li>Replace spinboxes/comboboxes with unit-aware edit widgets
+(<a href="https://github.com/LibrePCB/LibrePCB/pull/520">#520</a>)</li>
+<li>Provide <code>*.tar.gz</code> archive with pre-built binaries for deployment on Linux
+(<a href="https://github.com/LibrePCB/LibrePCB/pull/571">#571</a>)</li>
+<li>Fix broken settings when closing windows with OpenGL enabled
+(<a href="https://github.com/LibrePCB/LibrePCB/pull/503">#503</a>)</li>
+<li>Fix possible crash when re-opening symlinked projects
+(<a href="https://github.com/LibrePCB/LibrePCB/pull/573">#573</a>)</li>
+<li>Fix possibly wrong grab area of various graphics items
+(<a href="https://github.com/LibrePCB/LibrePCB/pull/582">#582</a>)</li>
+</ul>
+<h4 id="new-languages">New languages:</h4>
+<ul>
+<li><a href="https://www.transifex.com/librepcb/librepcb-application/language/sk/">Slovak</a>
+(98% translated)</li>
+<li><a href="https://www.transifex.com/librepcb/librepcb-application/language/fr/">French</a>
+(4% translated)</li>
+</ul>
+<h3 id="download">Download</h3>
+<p>The release can be downloaded for all major operating systems on our download
+page:</p>
+<h4 id="httpslibrepcborgdownload"><a href="https://librepcb.org/download/">https://librepcb.org/download/</a></h4>
+
+              <br><i>2019-11-30</i>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<footer id="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3 text-center">
+        <a href="https://github.com/LibrePCB/LibrePCB" class="icon-octocat icon-2x"></a>
+        <p><a href="index.xml">RSS Feed</a></p>
+        <p><script>document.write('Copyright &copy; ' ); document.write(new Date().getFullYear());document.write(' Urban Bruhin' );</script></p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+
+<script src="/js/jquery-2.1.1.min.js"></script>
+<script src="/js/owl.carousel.min.js"></script>
+
+<script>
+$(function() {
+$('a[href*=#]:not([href=#])').click(function() {
+  if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+      || location.hostname == this.hostname) {
+
+    var target = $(this.hash);
+    target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+    if (target.length) {
+      $('html,body').animate({
+        scrollTop: target.offset().top
+      }, 1000);
+      return false;
+    }
+  }
+});
+});
+</script>
+
+</body>
+
+</html>
+

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Comparison with other EDA tools</title>
+
+    
+    <link href="/css/bootstrap-theme.css" rel="stylesheet">
+
+    
+    <link href="/css/HPstyles.css" rel="stylesheet">
+    <link href="/css/hugofont.css" rel="stylesheet">
+    <link href="/css/owl.theme.default.css" rel="stylesheet">
+    <link href="/css/custom.css" rel="stylesheet">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  </head>
+
+  <body>
+
+<div id="top" class="blogHeader">
+  <div class="vert-text">
+    <div class="blogTitle">Compare LibrePCB</div>
+    <div class="buttonbox">
+      <a href="/" class="btn btn-home btn-lg">Home</i></a>
+      <a href="/blog" class="btn btn-blog btn-lg">Blog</i></a>
+      <a href="/download" class="btn btn-download btn-lg">Download</i></a>
+      <a href="/compare" class="btn btn-compare btn-lg">Compare</i></a>
+      <a href="https://docs.librepcb.org" class="btn btn-docs btn-lg">Docs</i></a>
+      <a href="/discuss" class="btn btn-discuss btn-lg">Discuss</i></a>
+      <a href="https://shop.spreadshirt.com/librepcb/" class="btn btn-merchandise btn-lg">Merchandise</i></a>
+      <a href="https://github.com/LibrePCB/LibrePCB" class="btn btn-dark btn-lg">GitHub <i class="icon-octocat"></i></a>
+      <a href="/donate" class="btn btn-donate btn-lg">Donate</a>
+    </div>
+  </div>
+</div>
+
+
+<div id="main">
+    <div id="intro" class="counterpoint">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2 text-center">
+            <h2>Comparison with other EDA tools</h2>
+            <p class="lead">
+              <p>Of course people compare LibrePCB to other EDA tools, especially Eagle and
+KiCad. To help you deciding which EDA tool is best for your needs, here a short
+overview about the differences between LibrePCB and other EDA tools.</p>
+<h3 id="library-concept">Library Concept</h3>
+<p>One major advantage of LibrePCB is the powerful library concept. See
+<a href="https://www.youtube.com/watch?v=vu-h5y6tK34">this talk at FOSDEM</a> (slides
+<a href="https://archive.fosdem.org/2018/schedule/event/cad_librepcb/attachments/slides/2267/export/events/attachments/cad_librepcb/slides/2267/librepcb_slides.pdf">here</a>)
+for details.</p>
+<h3 id="librepcb-vs-eagle">LibrePCB vs. Eagle</h3>
+<ul>
+<li>LibrePCB is free of charge – without limitations, even for commercial usage</li>
+<li>LibrePCB has an integrated library manager, thus it&rsquo;s much easier to install
+and update libraries</li>
+<li>LibrePCB library and project files are better suited for version control</li>
+<li>The schematic- and board editors of Eagle are currently more powerful
+(LibrePCB does not yet support hierarchical sheets, 3D view and more)</li>
+</ul>
+<h3 id="librepcb-vs-kicad">LibrePCB vs. KiCad</h3>
+<p><strong>Library management with LibrePCB is much easier:</strong></p>
+<ul>
+<li>Easy-to-use library manager to install and update libraries – no
+knowledge about Git and GitHub needed</li>
+<li>LibrePCB does not bundle (possibly outdated or low-quality) libraries together
+with the application – you have the full control over what libraries are used</li>
+<li>Only one library file format for all kinds of library elements – a library can
+contain symbols, footprints, components and in future also 3D models</li>
+<li>No broken references – you can rename symbols, footprints, pins, pads etc.
+without breaking other elements</li>
+<li>LibrePCB organizes parts by hierarchical categories, thus it&rsquo;s easier and more
+intuitive to find the part you&rsquo;re looking for</li>
+<li>No broken projects caused by updated or removed libraries – LibrePCB projects
+are self-contained and completely independent of system libraries</li>
+</ul>
+<p><strong>Version control of LibrePCB files is more fun:</strong></p>
+<ul>
+<li>All files of LibrePCB projects and libraries are highly optimized for
+version control systems</li>
+<li>User-related settings are strictly separated from project-related settings so
+you don&rsquo;t commit annoying, useless changes (like your zoom level or canvas
+position)</li>
+<li>LibrePCB has a canonical file format – if you save a project without making
+relevant changes, no files are modified at all</li>
+</ul>
+<p><strong>Netlist synchronization is easier with LibrePCB:</strong></p>
+<ul>
+<li>Schematics and board work on the same netlist, so they are always in sync – no
+manual forward/backward annotation is needed</li>
+<li>You never have to worry about the pinout of components – LibrePCB stores all
+connections between symbol pins and footprint pads in the library</li>
+</ul>
+<p><strong>BUT:</strong></p>
+<p>Although LibrePCB has many cool advantages, KiCad is (currently) much more
+powerful. It has an amazing amount of features which allow to design very
+complex PCBs. LibrePCB is still a very young software and thus lacks many
+features needed to design complex PCBs.</p>
+<p>So, if you are looking for an intuitive EDA tool to quickly design a simple PCB,
+you should give LibrePCB a try. But if you want to design complex PCBs, LibrePCB
+is probably not (yet) the tool you are looking for.</p>
+
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<footer id="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3 text-center">
+        <a href="https://github.com/LibrePCB/LibrePCB" class="icon-octocat icon-2x"></a>
+        <p><script>document.write('Copyright &copy; ' ); document.write(new Date().getFullYear());document.write(' Urban Bruhin' );</script></p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+
+<script src="/js/jquery-2.1.1.min.js"></script>
+<script src="/js/owl.carousel.min.js"></script>
+
+<script>
+$(function() {
+$('a[href*=#]:not([href=#])').click(function() {
+  if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+      || location.hostname == this.hostname) {
+
+    var target = $(this.hash);
+    target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+    if (target.length) {
+      $('html,body').animate({
+        scrollTop: target.offset().top
+      }, 1000);
+      return false;
+    }
+  }
+});
+});
+</script>
+
+</body>
+
+</html>
+

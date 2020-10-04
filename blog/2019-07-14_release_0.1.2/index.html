@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>LibrePCB 0.1.2 Released</title>
+
+    
+    <link href="/css/bootstrap-theme.css" rel="stylesheet">
+
+    
+    <link href="/css/HPstyles.css" rel="stylesheet">
+    <link href="/css/hugofont.css" rel="stylesheet">
+    <link href="/css/owl.theme.default.css" rel="stylesheet">
+    <link href="/css/custom.css" rel="stylesheet">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  </head>
+
+  <body>
+
+<div id="top" class="blogHeader">
+  <div class="vert-text">
+    <div class="blogTitle">LibrePCB Blog</div>
+    <div class="buttonbox">
+      <a href="/" class="btn btn-home btn-lg">Home</i></a>
+      <a href="/blog" class="btn btn-blog btn-lg">Blog</i></a>
+      <a href="/download" class="btn btn-download btn-lg">Download</i></a>
+      <a href="/compare" class="btn btn-compare btn-lg">Compare</i></a>
+      <a href="https://docs.librepcb.org" class="btn btn-docs btn-lg">Docs</i></a>
+      <a href="/discuss" class="btn btn-discuss btn-lg">Discuss</i></a>
+      <a href="https://shop.spreadshirt.com/librepcb/" class="btn btn-merchandise btn-lg">Merchandise</i></a>
+      <a href="https://github.com/LibrePCB/LibrePCB" class="btn btn-dark btn-lg">GitHub <i class="icon-octocat"></i></a>
+      <a href="/donate" class="btn btn-donate btn-lg">Donate</a>
+    </div>
+  </div>
+</div>
+
+
+<div id="main">
+    <div id="intro" class="counterpoint">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2 text-center">
+            <h2>LibrePCB 0.1.2 Released</h2>
+            <p class="lead">
+              <p>This is mainly a bugfix release which fixes some usability, compatibility and
+functional issues of the 0.1.1 release.</p>
+<h3 id="highlights">Highlights</h3>
+<h4 id="support-latest-build-environments">Support latest build environments</h4>
+<p>The dependencies <code>quazip</code>, <code>googletest</code>, <code>optional</code> and <code>type_safe</code> were
+updated (<a href="https://github.com/LibrePCB/LibrePCB/pull/476">#476</a>) and some
+deprecation warnings were fixed
+(<a href="https://github.com/LibrePCB/LibrePCB/pull/478">#478</a>). Now LibrePCB also
+compiles with GCC 9.x and Qt 5.13 without any warnings.</p>
+<p>Since we migrated from Travis-CI to Azure Pipelines
+(<a href="https://github.com/LibrePCB/LibrePCB/pull/458">#458</a>), CI is now able to
+build on Ubuntu 19.04 with GCC 9.x to ensure compatibility with recent build
+environments.</p>
+<h4 id="improved-table-widgets">Improved table widgets</h4>
+<p>The table widgets &ndash; especially in the library editor &ndash; behaved a bit strange
+and sometimes even buggy. After refactoring the implementation of
+the observer pattern in low-level classes
+(<a href="https://github.com/LibrePCB/LibrePCB/pull/449">#449</a>), we were able to replace
+most <code>QTableWidget</code> tables by <code>QTableView</code> using
+<a href="https://doc.qt.io/qt-5/model-view-programming.html">Qt&rsquo;s model/view framework</a>
+(<a href="https://github.com/LibrePCB/LibrePCB/pull/456">#456</a>). This heavily improves
+the usability and stability of our table widgets, see details in the changelog
+below.</p>
+<h3 id="changelog">Changelog</h3>
+<h4 id="library-editor">Library Editor:</h4>
+<ul>
+<li>Rename library overview context menu item &ldquo;copy&rdquo; to &ldquo;duplicate&rdquo;
+(<a href="https://github.com/LibrePCB/LibrePCB/pull/447">#447</a>)</li>
+<li>Preselect pin name when opening symbol pin properties dialog
+(<a href="https://github.com/LibrePCB/LibrePCB/pull/453">#453</a>)</li>
+</ul>
+<h4 id="schematic-editor">Schematic Editor:</h4>
+<ul>
+<li>Fix net label offset after mirroring
+(<a href="https://github.com/LibrePCB/LibrePCB/pull/451">#451</a>)</li>
+</ul>
+<h4 id="board-editor">Board Editor:</h4>
+<ul>
+<li>Fix unintended tool change after double click on footprint
+(<a href="https://github.com/LibrePCB/LibrePCB/pull/464">#464</a>)</li>
+<li>Fix inconsistent appearance of polygons between editor and Gerber export
+(<a href="https://github.com/LibrePCB/LibrePCB/pull/479">#479</a>)</li>
+</ul>
+<h4 id="miscellaneous">Miscellaneous:</h4>
+<ul>
+<li>Change predefined norms to &ldquo;IEC 60617&rdquo; + &ldquo;IEEE 315&rdquo;
+(<a href="https://github.com/LibrePCB/LibrePCB/pull/455">#455</a>)</li>
+<li>Enable scrolling with both axis when pressing Ctrl
+(<a href="https://github.com/LibrePCB/LibrePCB/pull/467">#467</a>)</li>
+<li>Refactor all table widgets using Qt&rsquo;s model/view framework
+(<a href="https://github.com/LibrePCB/LibrePCB/pull/456">#456</a>):
+<ul>
+<li>Fix application crashes with newer Qt versions when editing table content</li>
+<li>Fix possibly outdated table content when underlying data changes (e.g. on
+undo/redo)</li>
+<li>Sort tables where reasonable (some tables even allow the user to sort by
+specific column)</li>
+<li>Slightly improved error handling when entering invalid data into table cells</li>
+<li>In some tables, allow inserting multiple rows at once (e.g. the term &ldquo;1..5&rdquo;
+creates 5 rows, from &ldquo;1&rdquo; to &ldquo;5&rdquo;)</li>
+<li>Various other small improvements</li>
+</ul>
+</li>
+</ul>
+<h4 id="new-languages">New languages:</h4>
+<ul>
+<li><a href="https://www.transifex.com/librepcb/librepcb-application/language/tr/">Turkish</a>
+(6% translated)</li>
+</ul>
+<h3 id="download">Download</h3>
+<p>The release can be downloaded for all major operating systems on our download
+page:</p>
+<h4 id="httpslibrepcborgdownload"><a href="https://librepcb.org/download/">https://librepcb.org/download/</a></h4>
+
+              <br><i>2019-07-14</i>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<footer id="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3 text-center">
+        <a href="https://github.com/LibrePCB/LibrePCB" class="icon-octocat icon-2x"></a>
+        <p><a href="index.xml">RSS Feed</a></p>
+        <p><script>document.write('Copyright &copy; ' ); document.write(new Date().getFullYear());document.write(' Urban Bruhin' );</script></p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+
+<script src="/js/jquery-2.1.1.min.js"></script>
+<script src="/js/owl.carousel.min.js"></script>
+
+<script>
+$(function() {
+$('a[href*=#]:not([href=#])').click(function() {
+  if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+      || location.hostname == this.hostname) {
+
+    var target = $(this.hash);
+    target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+    if (target.length) {
+      $('html,body').animate({
+        scrollTop: target.offset().top
+      }, 1000);
+      return false;
+    }
+  }
+});
+});
+</script>
+
+</body>
+
+</html>
+

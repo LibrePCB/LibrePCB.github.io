@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>AISLER Supports LibrePCB Projects</title>
+
+    
+    <link href="/css/bootstrap-theme.css" rel="stylesheet">
+
+    
+    <link href="/css/HPstyles.css" rel="stylesheet">
+    <link href="/css/hugofont.css" rel="stylesheet">
+    <link href="/css/owl.theme.default.css" rel="stylesheet">
+    <link href="/css/custom.css" rel="stylesheet">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  </head>
+
+  <body>
+
+<div id="top" class="blogHeader">
+  <div class="vert-text">
+    <div class="blogTitle">LibrePCB Blog</div>
+    <div class="buttonbox">
+      <a href="/" class="btn btn-home btn-lg">Home</i></a>
+      <a href="/blog" class="btn btn-blog btn-lg">Blog</i></a>
+      <a href="/download" class="btn btn-download btn-lg">Download</i></a>
+      <a href="/compare" class="btn btn-compare btn-lg">Compare</i></a>
+      <a href="https://docs.librepcb.org" class="btn btn-docs btn-lg">Docs</i></a>
+      <a href="/discuss" class="btn btn-discuss btn-lg">Discuss</i></a>
+      <a href="https://shop.spreadshirt.com/librepcb/" class="btn btn-merchandise btn-lg">Merchandise</i></a>
+      <a href="https://github.com/LibrePCB/LibrePCB" class="btn btn-dark btn-lg">GitHub <i class="icon-octocat"></i></a>
+      <a href="/donate" class="btn btn-donate btn-lg">Donate</a>
+    </div>
+  </div>
+</div>
+
+
+<div id="main">
+    <div id="intro" class="counterpoint">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2 text-center">
+            <h2>AISLER Supports LibrePCB Projects</h2>
+            <p class="lead">
+              <p>We are very happy to announce that
+<a href="https://aisler.net/partners/librepcb">AISLER now supports LibrePCB projects</a>,
+so you can upload and review LibrePCB projects directly on their website and
+order PCBs and stencils just with a few clicks! :-)</p>
+<p><a href="/img/aisler_demo_brushless_controller.png"><img src="/img/aisler_demo_brushless_controller.png" alt="LibrePCB Project at AISLER"></a></p>
+<h3 id="why-aisler">Why AISLER?</h3>
+<p>AISLER, based in Netherlands, is a smart prototyping service for electronics.
+They provide PCBs, stencils and parts for electronic projects for an affordable
+price, and everything is made in Germany.</p>
+<p>I met Felix and Patrick, the founders of AISLER, at
+<a href="https://archive.fosdem.org/2018/">FOSDEM 2018</a>. Patrick held the talk
+<a href="https://archive.fosdem.org/2018/schedule/event/cad_dr_format/">Proposal for an open and democratic Design Rule format</a>
+and I gave an <a href="https://archive.fosdem.org/2018/schedule/event/cad_librepcb/">Introduction to LibrePCB</a>.
+It turned out that we all have very similar opinions how development and
+manufacturing of electronics could (and should) be improved. We all are trying
+to bring EDA to a next level, for that reason they founded AISLER and I started
+the LibrePCB project.</p>
+<p>At FOSDEM Felix and Patrick offered me to integrate support for LibrePCB project
+files into their website, to allow ordering PCBs by uploading LibrePCB projects.
+And even more: For every order of an uploaded LibrePCB project they make a
+donation to support the LibrePCB development!</p>
+<h3 id="implementation">Implementation</h3>
+<p>To make this happen, I created the <a href="https://docs.librepcb.org/#cli">LibrePCB CLI</a>
+which allows to automate the processing of LibrePCB projects. AISLER now uses
+that CLI to automatically generate Gerber files of an uploaded LibrePCB project.
+These Gerber files are then used to create the preview of the PCB, and to
+manufacture it in their fab.</p>
+<p><img src="/img/aisler_analyzing_librepcb_project.png" alt="Analyzing LibrePCB Project"></p>
+<p>In order to adjust the fabrication output settings (e.g. filenames) according
+their needs, they patch the board file <code>boards/&lt;BOARDNAME&gt;/board.lp</code> with their
+own settings. So you don&rsquo;t have to make any fabrication output settings by
+yourself, they will be overwritten anyway.</p>
+<h3 id="limitations">Limitations</h3>
+<p>As you may know already, LibrePCB allows to have multiple boards in one project.
+Currently it&rsquo;s not possible to select the specific board you want to order, so
+you will get an error when uploading a project with multiple boards. We will try
+to fix this limitation, but in the meantime you could manually adjust the
+project&rsquo;s file <code>boards/boards.lp</code> to remove all boards except the one you want
+to order ;)</p>
+<p>In addition, currently you have to manually create a ZIP archive containing the
+project directory, and upload that ZIP afterwards. I started to work on a
+solution to make this much easier.</p>
+<p>Also it&rsquo;s not yet possible for AISLER to export the BOM directly from the
+uploaded project because BOM export is still missing in LibrePCB. But you can
+still order parts at AISLER by uploading a CSV file with all parts.</p>
+<h3 id="try-it">Try it!</h3>
+<p>Just ZIP and upload your LibrePCB project to <a href="https://aisler.net/">aisler.net</a>
+to see the beautiful preview and to order the PCB :) It would be awesome if you
+order PCBs at AISLER as this way you directly support the development of
+LibrePCB!</p>
+<p>Many thanks to Felix and Patrick from AISLER to make this happen, and for
+supporting LibrePCB and other open source projects!</p>
+
+              <br><i>2018-12-03</i>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<footer id="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3 text-center">
+        <a href="https://github.com/LibrePCB/LibrePCB" class="icon-octocat icon-2x"></a>
+        <p><a href="index.xml">RSS Feed</a></p>
+        <p><script>document.write('Copyright &copy; ' ); document.write(new Date().getFullYear());document.write(' Urban Bruhin' );</script></p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+
+<script src="/js/jquery-2.1.1.min.js"></script>
+<script src="/js/owl.carousel.min.js"></script>
+
+<script>
+$(function() {
+$('a[href*=#]:not([href=#])').click(function() {
+  if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+      || location.hostname == this.hostname) {
+
+    var target = $(this.hash);
+    target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+    if (target.length) {
+      $('html,body').animate({
+        scrollTop: target.offset().top
+      }, 1000);
+      return false;
+    }
+  }
+});
+});
+</script>
+
+</body>
+
+</html>
+

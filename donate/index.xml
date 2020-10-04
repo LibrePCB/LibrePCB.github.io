@@ -1,0 +1,22 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Donate to LibrePCB</title>
+    <link>http://librepcb.org/donate/</link>
+    <description>Blog posts of LibrePCB, an Open Source EDA software</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+        <atom:link href="http://librepcb.org/donate/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Thank you!</title>
+      <link>http://librepcb.org/donate/thanks/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <dc:creator></dc:creator>
+      <guid>http://librepcb.org/donate/thanks/</guid>
+      <description>Thank you very much for supporting us to create better PCB design software for everyone! Your donation helps to keep the development ongoing, making LibrePCB more and more powerful.</description>
+    </item>
+    
+  </channel>
+</rss>

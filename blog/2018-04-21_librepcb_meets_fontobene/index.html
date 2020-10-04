@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>LibrePCB Meets FontoBene</title>
+
+    
+    <link href="/css/bootstrap-theme.css" rel="stylesheet">
+
+    
+    <link href="/css/HPstyles.css" rel="stylesheet">
+    <link href="/css/hugofont.css" rel="stylesheet">
+    <link href="/css/owl.theme.default.css" rel="stylesheet">
+    <link href="/css/custom.css" rel="stylesheet">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  </head>
+
+  <body>
+
+<div id="top" class="blogHeader">
+  <div class="vert-text">
+    <div class="blogTitle">LibrePCB Blog</div>
+    <div class="buttonbox">
+      <a href="/" class="btn btn-home btn-lg">Home</i></a>
+      <a href="/blog" class="btn btn-blog btn-lg">Blog</i></a>
+      <a href="/download" class="btn btn-download btn-lg">Download</i></a>
+      <a href="/compare" class="btn btn-compare btn-lg">Compare</i></a>
+      <a href="https://docs.librepcb.org" class="btn btn-docs btn-lg">Docs</i></a>
+      <a href="/discuss" class="btn btn-discuss btn-lg">Discuss</i></a>
+      <a href="https://shop.spreadshirt.com/librepcb/" class="btn btn-merchandise btn-lg">Merchandise</i></a>
+      <a href="https://github.com/LibrePCB/LibrePCB" class="btn btn-dark btn-lg">GitHub <i class="icon-octocat"></i></a>
+      <a href="/donate" class="btn btn-donate btn-lg">Donate</a>
+    </div>
+  </div>
+</div>
+
+
+<div id="main">
+    <div id="intro" class="counterpoint">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2 text-center">
+            <h2>LibrePCB Meets FontoBene</h2>
+            <p class="lead">
+              <p>Finally! LibrePCB has a fully functional stroke font which can be used on PCBs.
+So now you can place designators or other text items on silkscreen (or other
+layers) which of course are then exported into the generated Gerber files. The
+new font file format <a href="https://github.com/fontobene/fontobene/">FontoBene</a> was
+developed especially for LibrePCB.</p>
+<p><a href="/img/board_texts.png"><img src="/img/board_texts.png" alt="Board Texts"></a></p>
+<h3 id="why-a-stroke-font-instead-of-otfttf">Why a stroke font instead of OTF/TTF?</h3>
+<p>It may sound strange to implement a primitive stroke font in 2018 when we
+actually have much more powerful TrueType and OpenType fonts since many years.
+But there are still reasons to stick with the good old stroke fonts.</p>
+<p>One reason is that OpenType and TrueType fonts are very complex and thus require
+high effort to integrate them into LibrePCB. For example the Gerber export is
+not as trivial as you may expect because Gerber supports neither fonts nor
+Bézier curves. On the other side, fonts consisting only of a bunch of lines are
+extremely easy to export into Gerber files.</p>
+<p>Beside their simplicity, stroke fonts even have a clear advantage compared to
+OTF/TTF. Since you can set the stroke width to a value greater than or equal to
+the minimum silkscreen line width specified by your PCB manufacturer, you can be
+sure that the text items are printed properly and thus are perfect readable.</p>
+<p><a href="/img/board_editor_text_properties.png"><img src="/img/board_editor_text_properties.png" alt="Text Properties"></a></p>
+<h3 id="introducing-fontobene">Introducing FontoBene</h3>
+<p>Unfortunately we were not happy with the available stroke font formats because
+of several reasons. <a href="https://en.wikipedia.org/wiki/Hershey_fonts">Hershey</a> and
+<a href="https://vovanium.ru/sledy/newstroke/en">NewStroke</a> fonts have many edges
+because they only consist of straight line segments. LFF from LibreCAD and CXF
+from QCad look much smoother because they support circular arc segments, but
+unfortunately there aren&rsquo;t any clear specifications available and the existing
+fonts have non-permissive, partly even unknown licenses.</p>
+<p>So we started to create
+<a href="https://github.com/fontobene/fontobene/blob/master/SPECIFICATION.md">clear specifications</a>
+for a new stroke font file format, called <a href="https://github.com/fontobene/fontobene/">FontoBene</a>.
+Because the project is completely independent from any software project (even
+from LibrePCB), our hope is that it will also be used by other projects some time.</p>
+<p><img src="/img/fontobene.png" alt="FontoBene"></p>
+<p>Currently LibrePCB uses the <a href="https://vovanium.ru/sledy/newstroke/en">NewStroke</a>
+font which we <a href="https://github.com/fontobene/fontobene-fonts/pull/4">converted to FontoBene</a>,
+mainly because it is available under the CC0 Public Domain license. This means
+that we currently don&rsquo;t yet take advantage of having support for circular arc
+segments. The goal is to improve the font step by step.</p>
+<h3 id="self-contained-projects">Self-Contained Projects</h3>
+<p>In contrast to other EDA tools, LibrePCB embeds the used font files into each
+project. When creating a new project, The font files from the applications
+installation directory are just copied into the projects directory.</p>
+<p>The main advantage of this concept is that it makes projects more self-contained,
+i.e. projects are not affected at all if we modify or even replace the font
+files bundled with the application. So there is no risk to break existing
+projects by modifying the applications font files.</p>
+<p>Another advantage is that users are free to modify the font files of specific
+projects. For example if our font is missing a glyph you would need, or if you&rsquo;re
+unhappy with the look of some glyphs, you can just modify the font files in your
+project to fix it. Other EDA tools do not allow users to modify their (built-in)
+fonts.</p>
+<h3 id="links">Links</h3>
+<ul>
+<li>Pull request #246: <a href="https://github.com/LibrePCB/LibrePCB/pull/246">Implement stroke texts for footprints and boards</a>,</li>
+<li>Issue #165: <a href="https://github.com/LibrePCB/LibrePCB/issues/165">Decide how to implement fonts in footprints and boards</a></li>
+<li>FontoBene repository: <a href="https://github.com/fontobene/fontobene/">https://github.com/fontobene/fontobene/</a></li>
+</ul>
+
+              <br><i>2018-04-21</i>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<footer id="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3 text-center">
+        <a href="https://github.com/LibrePCB/LibrePCB" class="icon-octocat icon-2x"></a>
+        <p><a href="index.xml">RSS Feed</a></p>
+        <p><script>document.write('Copyright &copy; ' ); document.write(new Date().getFullYear());document.write(' Urban Bruhin' );</script></p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+
+<script src="/js/jquery-2.1.1.min.js"></script>
+<script src="/js/owl.carousel.min.js"></script>
+
+<script>
+$(function() {
+$('a[href*=#]:not([href=#])').click(function() {
+  if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+      || location.hostname == this.hostname) {
+
+    var target = $(this.hash);
+    target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+    if (target.length) {
+      $('html,body').animate({
+        scrollTop: target.offset().top
+      }, 1000);
+      return false;
+    }
+  }
+});
+});
+</script>
+
+</body>
+
+</html>
+

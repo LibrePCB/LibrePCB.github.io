@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>LibrePCB 0.1.1 Released</title>
+
+    
+    <link href="/css/bootstrap-theme.css" rel="stylesheet">
+
+    
+    <link href="/css/HPstyles.css" rel="stylesheet">
+    <link href="/css/hugofont.css" rel="stylesheet">
+    <link href="/css/owl.theme.default.css" rel="stylesheet">
+    <link href="/css/custom.css" rel="stylesheet">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  </head>
+
+  <body>
+
+<div id="top" class="blogHeader">
+  <div class="vert-text">
+    <div class="blogTitle">LibrePCB Blog</div>
+    <div class="buttonbox">
+      <a href="/" class="btn btn-home btn-lg">Home</i></a>
+      <a href="/blog" class="btn btn-blog btn-lg">Blog</i></a>
+      <a href="/download" class="btn btn-download btn-lg">Download</i></a>
+      <a href="/compare" class="btn btn-compare btn-lg">Compare</i></a>
+      <a href="https://docs.librepcb.org" class="btn btn-docs btn-lg">Docs</i></a>
+      <a href="/discuss" class="btn btn-discuss btn-lg">Discuss</i></a>
+      <a href="https://shop.spreadshirt.com/librepcb/" class="btn btn-merchandise btn-lg">Merchandise</i></a>
+      <a href="https://github.com/LibrePCB/LibrePCB" class="btn btn-dark btn-lg">GitHub <i class="icon-octocat"></i></a>
+      <a href="/donate" class="btn btn-donate btn-lg">Donate</a>
+    </div>
+  </div>
+</div>
+
+
+<div id="main">
+    <div id="intro" class="counterpoint">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2 text-center">
+            <h2>LibrePCB 0.1.1 Released</h2>
+            <p class="lead">
+              <p>There was a lot of progress the last months, and now it&rsquo;s time to provide a new
+release containing all the improvements. In this release, especially the
+library editor was heavily improved to make it more powerful and easier to
+use. See the highlights and the detailed changelog below.</p>
+<p><strong>Thanks a lot to all contributors and sponsors for pushing LibrePCB one step
+further!</strong></p>
+<h3 id="highlights">Highlights</h3>
+<h4 id="design-rule-check-for-library-elements-381httpsgithubcomlibrepcblibrepcbpull381">Design Rule Check for Library Elements (<a href="https://github.com/LibrePCB/LibrePCB/pull/381">#381</a>)</h4>
+<p>In virtually every EDA tool it&rsquo;s easy to make mistakes when creating library
+elements like symbols or packages. Usually you notice such mistakes later in the
+schematic or board editors because of the ERC or DRC, so you have to go back
+to the library editor which costs time and nerves. Many projects try to solve
+this problem using documentation and design guidelines. But humans are generally
+lazy and don&rsquo;t like to read those guidelines.</p>
+<p>LibrePCB 0.1.1 goes a different way: It shows potential problems with library
+elements right in the library editor, so you can fix them immediately, i.e.
+before they are used in any schematic or board. And even better, for many of the
+warnings, the library editor provides the corresponding fix with just one click!
+Let&rsquo;s see how it works:</p>
+<p><a href="/img/library_editor_rulecheck.gif"><img src="/img/library_editor_rulecheck.gif" alt="Library Element Checks"></a><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h4 id="more-powerful-symbol-variants-430httpsgithubcomlibrepcblibrepcbpull430">More Powerful Symbol Variants (<a href="https://github.com/LibrePCB/LibrePCB/pull/430">#430</a>)</h4>
+<p>LibrePCB uses component symbol variants to support different graphical
+representations for the same component, for example to distinguish between
+American and European norms. See
+<a href="https://www.youtube.com/watch?v=vu-h5y6tK34">this talk at FOSDEM</a> (slides
+<a href="https://archive.fosdem.org/2018/schedule/event/cad_librepcb/attachments/slides/2267/export/events/attachments/cad_librepcb/slides/2267/librepcb_slides.pdf">here</a>)
+for details.</p>
+<p>Although this was already implemented in LibrePCB 0.1.0, it was not very
+powerful yet because in the &ldquo;Add Component&rdquo; dialog you had to select the
+desired symbol variant manually every time. As typically the European symbol
+variants were selected by default, it was especially annoying for Americans.</p>
+<p>Now with the 0.1.1 release you can specify your preferred norm in the project
+settings, which will make the &ldquo;Add Component&rdquo; dialog pre-select the symbol
+variant which matches your preferred norm automatically! If you like to use
+American symbols, just add the norm &ldquo;IEEE 315&rdquo; to your project settings:</p>
+<p><a href="/img/project_settings_dialog_norm.png"><img src="/img/project_settings_dialog_norm.png" alt="Project Settings Dialog"></a><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h4 id="transactional-file-system-422httpsgithubcomlibrepcblibrepcbpull422">Transactional File System (<a href="https://github.com/LibrePCB/LibrePCB/pull/422">#422</a>)</h4>
+<p>This change is not directly visible to users, but it&rsquo;s still noteworthy because
+it&rsquo;s a very fundamental refactoring of the file system access of libraries and
+projects. The file system access is now transaction-based, which has several
+advantages:</p>
+<ul>
+<li>More reliable save/autosave mechanism, making libraries and projects even more
+robust against file access issues or application crashes.</li>
+<li>Cleaner software architecture, leading to less error-prone code.</li>
+<li>Much more future-proof as it allows to implement features which were not
+possible until now.</li>
+</ul>
+<h3 id="critical-bugfixes">Critical Bugfixes</h3>
+<p>Obround pads which are higher than wide (i.e. <code>height &gt; width</code>) were rendered
+wrong in the package and board editors of LibrePCB 0.1.0. In particular, their
+orientation on screen was wrong by 90 degrees, while the Gerber output was
+correct. This release fixes the wrong orientation, so if you have any pad
+affected by this bug, it will now appear 90° rotated compared to the 0.1.0
+release. See issue <a href="https://github.com/LibrePCB/LibrePCB/issues/424">#424</a> for
+details.</p>
+<h3 id="changelog">Changelog</h3>
+<h4 id="library-manager">Library Manager:</h4>
+<ul>
+<li>Add &ldquo;select all&rdquo; checkbox to install/update all libraries at once
+(<a href="https://github.com/LibrePCB/LibrePCB/pull/415">#415</a>)</li>
+<li>Various small layout improvements / memorize window geometry
+(<a href="https://github.com/LibrePCB/LibrePCB/pull/402">#402</a>)</li>
+</ul>
+<h4 id="library-editor">Library Editor:</h4>
+<ul>
+<li>Add rule check for library elements
+(<a href="https://github.com/LibrePCB/LibrePCB/pull/381">#381</a>)</li>
+<li>Add clipboard functionality (cut/copy/paste) to symbol and package editors
+(<a href="https://github.com/LibrePCB/LibrePCB/pull/442">#442</a>)</li>
+<li>Add search field to symbol/package/component chooser dialogs
+(<a href="https://github.com/LibrePCB/LibrePCB/pull/443">#443</a>)</li>
+<li>Support undo/redo also for library element metadata
+(<a href="https://github.com/LibrePCB/LibrePCB/pull/375">#375</a>)</li>
+<li>Make tabs closable with middle mouse button
+(<a href="https://github.com/LibrePCB/LibrePCB/pull/388">#388</a>)</li>
+<li>Add context menus to overview tab
+(<a href="https://github.com/LibrePCB/LibrePCB/pull/380">#380</a>,
+<a href="https://github.com/LibrePCB/LibrePCB/pull/425">#425</a>)</li>
+<li>Display element name in &ldquo;save&rdquo; action
+(<a href="https://github.com/LibrePCB/LibrePCB/pull/419">#419</a>)</li>
+<li>Disable menu items if not needed for the opened element</li>
+<li>Change default package line width to 0.2mm
+(<a href="https://github.com/LibrePCB/LibrePCB/pull/413">#413</a>)</li>
+<li>Sort component signal dropdown in device editor by name
+(<a href="https://github.com/LibrePCB/LibrePCB/pull/427">#427</a>)</li>
+<li>Fix possibly outdated information in component signal editor
+(<a href="https://github.com/LibrePCB/LibrePCB/pull/398">#398</a>)</li>
+<li>Fix layout issues of symbol-, package-, and component chooser dialogs
+(<a href="https://github.com/LibrePCB/LibrePCB/pull/439">#439</a>)</li>
+<li>Start library rescan if library modified</li>
+</ul>
+<h4 id="schematic-editor">Schematic Editor:</h4>
+<ul>
+<li>Add project settings dialog
+(<a href="https://github.com/LibrePCB/LibrePCB/pull/430">#430</a>)</li>
+<li>Pre-select symbol variant in &ldquo;Add Component&rdquo; dialog by norm
+(<a href="https://github.com/LibrePCB/LibrePCB/pull/430">#430</a>)</li>
+<li>Improve search in &ldquo;Add Component&rdquo; dialog
+(<a href="https://github.com/LibrePCB/LibrePCB/pull/444">#444</a>)</li>
+<li>Fix unreadable text in ERC dock widget with Qt 5.12
+(<a href="https://github.com/LibrePCB/LibrePCB/pull/437">#437</a>)</li>
+</ul>
+<h4 id="board-editor">Board Editor:</h4>
+<ul>
+<li>Fix empty view after removing a board
+(<a href="https://github.com/LibrePCB/LibrePCB/pull/431">#431</a>)</li>
+</ul>
+<h4 id="cli">CLI:</h4>
+<ul>
+<li>Add support for opening <code>*.lppz</code> project files
+(<a href="https://github.com/LibrePCB/LibrePCB/pull/433">#433</a>)</li>
+<li>Allow to specify custom fabrication output settings
+(<a href="https://github.com/LibrePCB/LibrePCB/pull/434">#434</a>)</li>
+<li>Add <code>open-library</code> command
+(<a href="https://github.com/LibrePCB/LibrePCB/pull/435">#435</a>)</li>
+</ul>
+<h4 id="miscellaneous">Miscellaneous:</h4>
+<ul>
+<li>Make runnable on FreeBSD
+(<a href="https://github.com/LibrePCB/LibrePCB/pull/417">#417</a>)</li>
+<li>Remove backward compatibility to pre-0.1 file format
+(<a href="https://github.com/LibrePCB/LibrePCB/pull/420">#420</a>)</li>
+<li>Refactor file access with a transactional file system
+(<a href="https://github.com/LibrePCB/LibrePCB/pull/422">#422</a>)</li>
+<li>Refactor/improve workspace libraries handling
+(<a href="https://github.com/LibrePCB/LibrePCB/pull/400">#400</a>)</li>
+<li>Use separate <code>*.sqlite</code> files for each database version
+(<a href="https://github.com/LibrePCB/LibrePCB/pull/401">#401</a>)</li>
+<li>Load category trees from database instead of file system
+(<a href="https://github.com/LibrePCB/LibrePCB/pull/421">#421</a>)</li>
+<li>Filter all category trees to show only relevant entries
+(<a href="https://github.com/LibrePCB/LibrePCB/pull/426">#426</a>)</li>
+<li>Fix possible wrong orientation of obround pads
+(<a href="https://github.com/LibrePCB/LibrePCB/pull/428">#428</a>)</li>
+<li>Fix cell height issues of several tables on high DPI displays
+(<a href="https://github.com/LibrePCB/LibrePCB/pull/429">#429</a>)</li>
+<li>Add support for exporting projects to <code>*.lppz</code> archives
+(<a href="https://github.com/LibrePCB/LibrePCB/pull/433">#433</a>)</li>
+<li>Update default layer colors
+(<a href="https://github.com/LibrePCB/LibrePCB/pull/440">#440</a>)</li>
+<li>Update Fontobene stroke fonts
+(<a href="https://github.com/LibrePCB/LibrePCB/pull/438">#438</a>)</li>
+</ul>
+<h4 id="new-languages">New languages:</h4>
+<ul>
+<li><a href="https://www.transifex.com/librepcb/librepcb-application/language/pl/">Polish</a>
+(29% translated)</li>
+<li><a href="https://www.transifex.com/librepcb/librepcb-application/language/zh_CN/">Chinese</a>
+(14% translated)</li>
+<li><a href="https://www.transifex.com/librepcb/librepcb-application/language/es/">Spanish</a>
+(0% translated)</li>
+</ul>
+<h3 id="download">Download</h3>
+<p>The release can be downloaded for all major operating systems on our download
+page:</p>
+<h4 id="httpslibrepcborgdownload"><a href="https://librepcb.org/download/">https://librepcb.org/download/</a></h4>
+
+              <br><i>2019-04-21</i>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<footer id="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3 text-center">
+        <a href="https://github.com/LibrePCB/LibrePCB" class="icon-octocat icon-2x"></a>
+        <p><a href="index.xml">RSS Feed</a></p>
+        <p><script>document.write('Copyright &copy; ' ); document.write(new Date().getFullYear());document.write(' Urban Bruhin' );</script></p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+
+<script src="/js/jquery-2.1.1.min.js"></script>
+<script src="/js/owl.carousel.min.js"></script>
+
+<script>
+$(function() {
+$('a[href*=#]:not([href=#])').click(function() {
+  if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+      || location.hostname == this.hostname) {
+
+    var target = $(this.hash);
+    target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+    if (target.length) {
+      $('html,body').animate({
+        scrollTop: target.offset().top
+      }, 1000);
+      return false;
+    }
+  }
+});
+});
+</script>
+
+</body>
+
+</html>
+

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>LibrePCB 0.1.0 RC1 Released</title>
+
+    
+    <link href="/css/bootstrap-theme.css" rel="stylesheet">
+
+    
+    <link href="/css/HPstyles.css" rel="stylesheet">
+    <link href="/css/hugofont.css" rel="stylesheet">
+    <link href="/css/owl.theme.default.css" rel="stylesheet">
+    <link href="/css/custom.css" rel="stylesheet">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  </head>
+
+  <body>
+
+<div id="top" class="blogHeader">
+  <div class="vert-text">
+    <div class="blogTitle">LibrePCB Blog</div>
+    <div class="buttonbox">
+      <a href="/" class="btn btn-home btn-lg">Home</i></a>
+      <a href="/blog" class="btn btn-blog btn-lg">Blog</i></a>
+      <a href="/download" class="btn btn-download btn-lg">Download</i></a>
+      <a href="/compare" class="btn btn-compare btn-lg">Compare</i></a>
+      <a href="https://docs.librepcb.org" class="btn btn-docs btn-lg">Docs</i></a>
+      <a href="/discuss" class="btn btn-discuss btn-lg">Discuss</i></a>
+      <a href="https://shop.spreadshirt.com/librepcb/" class="btn btn-merchandise btn-lg">Merchandise</i></a>
+      <a href="https://github.com/LibrePCB/LibrePCB" class="btn btn-dark btn-lg">GitHub <i class="icon-octocat"></i></a>
+      <a href="/donate" class="btn btn-donate btn-lg">Donate</a>
+    </div>
+  </div>
+</div>
+
+
+<div id="main">
+    <div id="intro" class="counterpoint">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2 text-center">
+            <h2>LibrePCB 0.1.0 RC1 Released</h2>
+            <p class="lead">
+              <p><strong>Great news: Our first official release candidate is out! :-)</strong></p>
+<p>If you didn&rsquo;t try LibrePCB already, now is the time to start using (or at least
+testing) LibrePCB for your next projects – we would love to get your feedback!</p>
+<h3 id="project-status">Project Status</h3>
+<p>Please keep in mind that this is our very first release candidate, so you may
+encounter one or another bug or missing feature. Nevertheless, we think the
+application is in a very usable state now – you can download and create
+libraries, draw schematics, route multilayer PCBs and export Gerber files.
+Unfortunately features like DRC, BOM export or buses are not implemented yet,
+they will be provided in a future release.</p>
+<p>If you encounter bugs, we would be happy if you report them to
+<a href="https://github.com/LibrePCB/LibrePCB/issues">our issue tracker</a>. As it&rsquo;s only
+a release <em>candidate</em>, there is some time to fix the most critical issues until
+the first <em>stable</em> release.</p>
+<h3 id="file-format-stability">File Format Stability</h3>
+<p>Until now, we always communicated that the file format is not considered stable.
+Any change in the file format could break older projects, so generally it was
+not recommended to use LibrePCB productively.</p>
+<p>With this first release candidate we consider the file format to be stable,
+so any future release should be able to open libraries and projects created
+with this release candidate. Only if there is an extremely critical issue with
+the file format we may still do a breaking change before publishing the stable
+0.1.0 release – but that&rsquo;s very unlikely :)</p>
+<p><em><strong>ATTENTION:</strong></em> <em>The file format is only considered stable for official releases
+– any intermediate version (e.g. from nightly builds) may not be upgradeable in
+the next release! So if you already used our nightly builds (or other binaries
+built from the <code>master</code> branch), you have to switch to official releases now.
+Nightly builds must really not be used for productive work. See
+<a href="https://developers.librepcb.org/df/d30/doc_developers.html">developers information</a> and
+<a href="https://developers.librepcb.org/da/dbc/doc_release_workflow.html">release workflow documentation</a>
+for details.</em></p>
+<h3 id="libraries">Libraries</h3>
+<p>Our official and ready-to-use libraries can easily be installed with the library
+manager integrated in LibrePCB. But as these libraries currently only contain
+very few elements, we would be very happy to get pull requests
+<a href="https://github.com/LibrePCB-Libraries">at the corresponding repositories</a> to
+add much more elements!</p>
+<h3 id="download">Download</h3>
+<p>The release candidate can be downloaded for all major operating systems at our
+new download page:</p>
+<h4 id="httpslibrepcborgdownload"><a href="https://librepcb.org/download/">https://librepcb.org/download/</a></h4>
+<p>Many thanks to all the contributors and sponsors making this release possible!
+It was hard work of more than five years to bring out this first release. We
+would really appreciate if you supported the development either with
+contributions or donations (e.g. at <a href="https://www.patreon.com/librepcb">Patreon</a>).
+Every dollar helps to keep this huge project alive ;-)</p>
+<p>And now: Happy testing! :-)</p>
+
+              <br><i>2018-10-21</i>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<footer id="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3 text-center">
+        <a href="https://github.com/LibrePCB/LibrePCB" class="icon-octocat icon-2x"></a>
+        <p><a href="index.xml">RSS Feed</a></p>
+        <p><script>document.write('Copyright &copy; ' ); document.write(new Date().getFullYear());document.write(' Urban Bruhin' );</script></p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+
+<script src="/js/jquery-2.1.1.min.js"></script>
+<script src="/js/owl.carousel.min.js"></script>
+
+<script>
+$(function() {
+$('a[href*=#]:not([href=#])').click(function() {
+  if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+      || location.hostname == this.hostname) {
+
+    var target = $(this.hash);
+    target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+    if (target.length) {
+      $('html,body').animate({
+        scrollTop: target.offset().top
+      }, 1000);
+      return false;
+    }
+  }
+});
+});
+</script>
+
+</body>
+
+</html>
+

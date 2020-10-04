@@ -1,0 +1,81 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>LibrePCB</title>
+    <link>http://librepcb.org/</link>
+    <description>Blog posts of LibrePCB, an Open Source EDA software</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 04 Oct 2020 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="http://librepcb.org/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>LibrePCB Blog</title>
+      <link>http://librepcb.org/blog/</link>
+      <pubDate>Sun, 04 Oct 2020 00:00:00 +0000</pubDate>
+      <dc:creator></dc:creator>
+      <guid>http://librepcb.org/blog/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Posts</title>
+      <link>http://librepcb.org/post/</link>
+      <pubDate>Sat, 04 Feb 2017 00:00:00 +0000</pubDate>
+      <dc:creator></dc:creator>
+      <guid>http://librepcb.org/post/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Comparison with other EDA tools</title>
+      <link>http://librepcb.org/compare/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <dc:creator></dc:creator>
+      <guid>http://librepcb.org/compare/</guid>
+      <description>Of course people compare LibrePCB to other EDA tools, especially Eagle and KiCad. To help you deciding which EDA tool is best for your needs, here a short overview about the differences between LibrePCB and other EDA tools.
+Library Concept One major advantage of LibrePCB is the powerful library concept. See this talk at FOSDEM (slides here) for details.
+LibrePCB vs. Eagle  LibrePCB is free of charge – without limitations, even for commercial usage LibrePCB has an integrated library manager, thus it&amp;rsquo;s much easier to install and update libraries LibrePCB library and project files are better suited for version control The schematic- and board editors of Eagle are currently more powerful (LibrePCB does not yet support hierarchical sheets, 3D view and more)  LibrePCB vs.</description>
+    </item>
+    
+    <item>
+      <title>Discuss</title>
+      <link>http://librepcb.org/discuss/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <dc:creator></dc:creator>
+      <guid>http://librepcb.org/discuss/</guid>
+      <description>Forum The best way for discussing improvement ideas or getting help is our discussion forum. Sign up and join the conversation!
+Chat We also have a development channel on IRC and a group on Telegram. The two chats are bridged, so you can join any one of them to see all conversations.
+ #librepcb on Freenode LibrePCB_dev on Telegram  Note that the chat is mainly for discussing the development of LibrePCB.</description>
+    </item>
+    
+    <item>
+      <title>Donate to LibrePCB</title>
+      <link>http://librepcb.org/donate/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <dc:creator></dc:creator>
+      <guid>http://librepcb.org/donate/</guid>
+      <description>LibrePCB is an open source project – it&amp;rsquo;s made by the community, for the community. This means that everyone can use LibrePCB without paying for it.
+But if you like LibrePCB, please consider supporting the ongoing development of LibrePCB with a donation. The more donations are made, the more time we can put into the development of new features to make LibrePCB even more powerful.
+Ordering PCBs at AISLER You want to order a PCB designed with LibrePCB?</description>
+    </item>
+    
+    <item>
+      <title>LibrePCB Downloads</title>
+      <link>http://librepcb.org/download/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <dc:creator></dc:creator>
+      <guid>http://librepcb.org/download/</guid>
+      <description>Here you can download official LibrePCB releases.
+Please read the Getting Started Guide for installation and usage instructions.
+Windows Download LibrePCB Installer for Windows Alternative: Portable ZIP (extract &amp;amp; run)
+Linux Download LibrePCB Installer for Linux Alternatives for various distributions: Snap, Flatpak, AppImage (set executable flag &amp;amp; run) or binary archive.
+Arch Linux: librepcb (builds from source) or librepcb-appimage (downloads binary)
+OpenPandora: librepcb from OpenPandora Repository
+NixOS: librepcb package
+BSD FreeBSD: librepcb port</description>
+    </item>
+    
+  </channel>
+</rss>

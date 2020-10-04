@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>LibrePCB Has Switched to S-Expressions</title>
+
+    
+    <link href="/css/bootstrap-theme.css" rel="stylesheet">
+
+    
+    <link href="/css/HPstyles.css" rel="stylesheet">
+    <link href="/css/hugofont.css" rel="stylesheet">
+    <link href="/css/owl.theme.default.css" rel="stylesheet">
+    <link href="/css/custom.css" rel="stylesheet">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  </head>
+
+  <body>
+
+<div id="top" class="blogHeader">
+  <div class="vert-text">
+    <div class="blogTitle">LibrePCB Blog</div>
+    <div class="buttonbox">
+      <a href="/" class="btn btn-home btn-lg">Home</i></a>
+      <a href="/blog" class="btn btn-blog btn-lg">Blog</i></a>
+      <a href="/download" class="btn btn-download btn-lg">Download</i></a>
+      <a href="/compare" class="btn btn-compare btn-lg">Compare</i></a>
+      <a href="https://docs.librepcb.org" class="btn btn-docs btn-lg">Docs</i></a>
+      <a href="/discuss" class="btn btn-discuss btn-lg">Discuss</i></a>
+      <a href="https://shop.spreadshirt.com/librepcb/" class="btn btn-merchandise btn-lg">Merchandise</i></a>
+      <a href="https://github.com/LibrePCB/LibrePCB" class="btn btn-dark btn-lg">GitHub <i class="icon-octocat"></i></a>
+      <a href="/donate" class="btn btn-donate btn-lg">Donate</a>
+    </div>
+  </div>
+</div>
+
+
+<div id="main">
+    <div id="intro" class="counterpoint">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2 text-center">
+            <h2>LibrePCB Has Switched to S-Expressions</h2>
+            <p class="lead">
+              <p>One major goal of LibrePCB is to use human readable files to represent libraries,
+projects and so on. This is important to let the user understand what the EDA
+tool actually does when modifying a schematic or board. In addition, a good file
+format is essential for version control systems to keep track of changes in
+libraries and projects.</p>
+<p>But LibrePCB doesn&rsquo;t just want to have <em>some</em> human readable file format. It
+wants to use the <strong>best possible</strong> file format for our specific needs!</p>
+<h3 id="xml-and-similar-formats">XML and Similar Formats</h3>
+<p>Until now, LibrePCB used <a href="https://en.wikipedia.org/wiki/XML">XML</a> as file format.
+But unfortunately we were not very happy with it, because of several reasons:</p>
+<ul>
+<li>The XML specifications are <strong>rather complex</strong> (we used only a small subset of
+the available features). In <a href="https://blog.pragmatists.com/xml-be-cautious-69a981fdc56a">this blog post</a>
+you can see that this complexity can even be dangerous!</li>
+<li>The syntax is <strong>quite verbose</strong> (it even contains redundant information,
+e.g. <code>&lt;size&gt;2.54&lt;/size&gt;</code>).</li>
+<li>Available XML generators typically provide <strong>only little control over the
+formatting</strong> of the generated XML files. This leads to either very long files
+(many linebreaks) or very long lines (only few linebreaks). Both is bad for
+readability.</li>
+</ul>
+<p>Other file formats (or their generators) have similar issues, so it seems that
+the only reasonable solution is to use a custom file format, or at least a
+custom generator.</p>
+<h3 id="s-expressions-with-custom-generator">S-Expressions with Custom Generator</h3>
+<p>To avoid completely reinventing the wheel, we decided to use the
+<a href="http://people.csail.mit.edu/rivest/Sexp.txt">S-Expressions</a> file format.
+<a href="http://kicad-pcb.org">KiCad</a> uses this file format
+<a href="http://kicad-pcb.org/post/release-4.0.0/">since version 4.0</a>, and it seems that
+it&rsquo;s really well suited for the use case of an EDA tool.</p>
+<p>S-Expressions are <em>very</em> simple to understand, but still powerful enough for
+LibrePCB. And the syntax is not verbose, but still expressive.</p>
+<p>With a custom S-Expressions generator, we are now able to control every little
+bit of the format of our generated files. Here you can see the difference
+between the old XML file format and the new S-Expressions file format:</p>
+<p><a href="/img/xml_vs_s_expressions.png"><img src="/img/xml_vs_s_expressions.png" alt="XML vs. S-Expressions"></a></p>
+<p><em>Note: Even if the S-Expressions file has 6 lines more than the XML file, it&rsquo;s
+~16% smaller in size!</em></p>
+<h3 id="links">Links</h3>
+<ul>
+<li>Issue #150: <a href="https://github.com/LibrePCB/LibrePCB/issues/150">LibrePCB file format discussion</a></li>
+<li>Issue #192: <a href="https://github.com/LibrePCB/LibrePCB/issues/192">Switch from XML to S-Expressions file format</a></li>
+<li>Pull request #193: <a href="https://github.com/LibrePCB/LibrePCB/pull/193">Switch from XML to S-Expressions file format</a></li>
+</ul>
+
+              <br><i>2017-10-30</i>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<footer id="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3 text-center">
+        <a href="https://github.com/LibrePCB/LibrePCB" class="icon-octocat icon-2x"></a>
+        <p><a href="index.xml">RSS Feed</a></p>
+        <p><script>document.write('Copyright &copy; ' ); document.write(new Date().getFullYear());document.write(' Urban Bruhin' );</script></p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+
+<script src="/js/jquery-2.1.1.min.js"></script>
+<script src="/js/owl.carousel.min.js"></script>
+
+<script>
+$(function() {
+$('a[href*=#]:not([href=#])').click(function() {
+  if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+      || location.hostname == this.hostname) {
+
+    var target = $(this.hash);
+    target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+    if (target.length) {
+      $('html,body').animate({
+        scrollTop: target.offset().top
+      }, 1000);
+      return false;
+    }
+  }
+});
+});
+</script>
+
+</body>
+
+</html>
+
